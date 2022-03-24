@@ -1,3 +1,93 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'IBMSans';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('/fonts/ibm-plex-sans-var.woff2');
+}
+  
+/* @font-face {
+    font-family: 'IBMSans';
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: optional;
+    src: url(/fonts/ibm-plex-sans-var-italic.woff2) format('woff2');
+} */
+
+@font-face {
+    font-family: 'QuattroBold';
+    src: url('/fonts/iAWriterQuattroS-Bold.woff2');
+    font-weight: 700;
+    font-display : swap;
+}
+@font-face {
+    font-family: 'Quattro';
+    src: url('/fonts/iAWriterQuattroS-Regular.woff2');
+    font-weight: 400;
+    font-display : swap;
+}
+
+::selection {
+    background-color: #47a3f3;
+    color: #fefefe;
+  }
+
+html {
+    min-width: 360px;
+    scroll-behavior: smooth;
+  }
+  
+#__next {
+    @apply bg-gray-50 dark:bg-black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+.skip-nav {
+    @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8;
+}
+  
+#skip {
+    scroll-margin-top: 1.125rem;
+}  
+
+@supports not (backdrop-filter: none) {
+    .sticky-nav {
+      backdrop-filter: none;
+      @apply bg-opacity-100;
+    }
+}
+  
+.anchor:hover {
+    @apply visible;
+}
+
+pre::-webkit-scrollbar {
+    display: none;
+}
+  
+pre {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+  
+.highlight-line {
+    @apply block px-4 -mx-4 bg-gray-100 border-l-4 border-blue-500 dark:bg-gray-800;
+}
+
+.capsize::before {
+    content: '';
+    margin-bottom: -0.098em;
+    display: table;
+  }
+  
+  .capsize::after {
+    content: '';
+    margin-top: -0.219em;
+    display: table;
+  }
