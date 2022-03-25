@@ -6,9 +6,11 @@ export default function Tweets({ tweets }) {
 
     return (
         <Layout title="Tweets | Darshan Aswath">
-            <h1 className="font-bold text-3xl md:text-4xl pb-1">Favourite Tweets</h1>
-            <p className="pb-6 font-Quattro text-sm text-gray-600 dark:text-gray-400">Ea consequat ea veniam ex non mollit ad eiusmod ullamco amet. Ea consequat ea veniam ex non mollit ad eiusmod ullamco amet.</p>
-            <div className='space-y-4'>
+            <h1 className="font-bold text-3xl md:text-4xl pb-2">Favourite Tweets</h1>
+            <p className="pb-6 font-Quattro text-sm text-gray-600 dark:text-gray-400">
+                As i spend most of my time on twitter, here are the collection of some of my favourite tweets that inspire me :)
+            </p>
+            <div className='space-y-6'>
                 {tweets.map((tweet: any) => {
                     return (
                         <div key={tweet.id}>
