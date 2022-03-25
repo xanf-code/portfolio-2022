@@ -57,10 +57,10 @@ function Header() {
                 <div className="ml-[-0.60rem]">
                     <MobileMenu />
                     <NavItem href="/" text="Home" />
-                    <NavItem href="/guestbook" text="Home" />
-                    <NavItem href="/dashboard" text="Home" />
-                    <NavItem href="/blog" text="Home" />
+                    <NavItem href="/projects" text="Projects" />
+                    <NavItem href="/components" text="Components" />
                     <NavItem href="/tweets" text="Tweets" />
+                    <NavItem href="/uses" text="Uses" />
                 </div>
                 <div>
                     {renderThemeChanger()}

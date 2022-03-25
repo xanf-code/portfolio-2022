@@ -47,13 +47,13 @@ export async function getPosts(ID: string[]) {
             },
         });
 
-        return data.data;
+        return data;
     }
 
     const authorData = await getAuthorInfo(authors);
 
     const uniqueTweets: any = new Map(tweets.map(s => [s.author_id, s]));
-    const result = authorData.map(({ id, ...rest }) => ({ ...rest, ...uniqueTweets.get(id) }));
+    const result = authorData.data.map(({ id, ...rest }) => ({ ...rest, ...uniqueTweets.get(id) }));
 
     if (data) {
         return result;

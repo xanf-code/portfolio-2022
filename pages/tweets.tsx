@@ -3,6 +3,7 @@ import { getPosts } from "../lib/network/twitter"
 import Container from "../ui/Tweet/container";
 
 export default function Tweets({ tweets }) {
+
     return (
         <Layout title="Tweets | Darshan Aswath">
             <div className='space-y-4'>
@@ -25,7 +26,10 @@ export async function getServerSideProps() {
         "1499474083058229254",
         "1315710272854806533",
         "1282017541020213248",
-        "1507095931023409160"
+        "1501014877585825795",
+        "1500215037142749188",
+        "1507198237014376450",
+        "1486892762821951489"
     ]);
 
     return {
