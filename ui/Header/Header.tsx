@@ -60,7 +60,7 @@ function Header() {
                     <NavItem href="/guestbook" text="Home" />
                     <NavItem href="/dashboard" text="Home" />
                     <NavItem href="/blog" text="Home" />
-                    <NavItem href="/snippets" text="Home" />
+                    <NavItem href="/tweets" text="Tweets" />
                 </div>
                 <div>
                     {renderThemeChanger()}
