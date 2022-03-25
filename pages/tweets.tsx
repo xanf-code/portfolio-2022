@@ -3,9 +3,6 @@ import { getPosts } from "../lib/network/twitter"
 import Container from "../ui/Tweet/container";
 
 export default function Tweets({ tweets }) {
-
-    console.log(tweets);
-
     return (
         <Layout title="Tweets | Darshan Aswath">
             <div className='space-y-4'>

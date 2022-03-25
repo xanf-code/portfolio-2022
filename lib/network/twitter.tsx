@@ -3,9 +3,6 @@
 */
 
 import axios from "axios";
-const token = process.env.BEARER_TOKEN;
-
-const authors: any = [];
 
 export async function getPosts(ID: string[]) {
     const params = {
@@ -21,12 +18,14 @@ export async function getPosts(ID: string[]) {
     const { data } = await axios.get(POST_ENDPOINT, {
         params: params,
         headers: {
-            'Authorization': `Bearer ${token}`,
+            'Authorization': `Bearer ${process.env.BEARER_TOKEN}`,
             'Content-Type': 'application/json',
         },
     });
 
     const tweets = data.data;
+
+    const authors: any = [];
 
     tweets.forEach((tweets) => {
         authors.push(tweets.author_id)
@@ -43,7 +42,7 @@ export async function getPosts(ID: string[]) {
         const { data } = await axios.get(USERS_ENDPOINT, {
             params: params,
             headers: {
-                'Authorization': `Bearer ${token}`,
+                'Authorization': `Bearer ${process.env.BEARER_TOKEN}`,
                 'Content-Type': 'application/json',
             },
         });
