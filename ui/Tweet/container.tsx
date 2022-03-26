@@ -12,7 +12,7 @@ function Container({ data }) {
     const formattedText = data.text.replace(/https:\/\/[\n\S]+/g, '');
 
     return (
-        <div className="border-2 p-4 border-gray-200 dark:border-gray-900 rounded-lg bg-gray-100 dark:bg-black">
+        <div className="border-2 p-4 border-gray-200 dark:border-gray-900 rounded-lg bg-gray-100 dark:bg-[#191f21]">
             {/* Header */}
             <a href={`https://twitter.com/${data.username}`} target="_blank">
                 <div className="flex justify-between items-center">
