@@ -45,7 +45,7 @@ export default function MobileMenu() {
                 <ul
                     className={cn(
                         styles.menu,
-                        'flex flex-col absolute bg-gray-50 dark:bg-black',
+                        'flex flex-col absolute bg-[#fcfcfc] dark:bg-[#161616]',
                         isMenuRendered && styles.menuRendered
                     )}
                 >
@@ -99,7 +99,7 @@ export default function MobileMenu() {
                         style={{ transitionDelay: '275ms' }}
                     >
                         <div className='flex space-x-4 pb-4'>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z" /><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-5-8h2a3 3 0 0 0 6 0h2a5 5 0 0 1-10 0z" fill='currentColor' /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M0 0h24v24H0z" /><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-5-8h2a3 3 0 0 0 6 0h2a5 5 0 0 1-10 0z" fill='currentColor' /></svg>
                             <Link href="/uses">
                                 <a className="flex w-auto text-base">Uses</a>
                             </Link>

@@ -9,14 +9,6 @@
     font-display: swap;
     src: url('/fonts/ibm-plex-sans-var.woff2');
 }
-  
-/* @font-face {
-    font-family: 'IBMSans';
-    font-style: italic;
-    font-weight: 100 900;
-    font-display: optional;
-    src: url(/fonts/ibm-plex-sans-var-italic.woff2) format('woff2');
-} */
 
 @font-face {
     font-family: 'QuattroBold';
@@ -42,19 +34,12 @@ html {
   }
   
 #__next {
-    @apply bg-gray-50 dark:bg-black;
+    @apply bg-[#fcfcfc] dark:bg-[#161616];
+    /* @apply bg-gradient-to-b from-[#ffffff] to-[#f5e3e6] dark:from-[#000000] dark:to-[#12100e]; */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-  
-.skip-nav {
-    @apply absolute px-4 py-3 transition-transform duration-200 transform -translate-y-12 -left-1/4 focus:top-4 focus:translate-y-3 -top-8;
-}
-  
-#skip {
-    scroll-margin-top: 1.125rem;
-}  
 
 @supports not (backdrop-filter: none) {
     .sticky-nav {

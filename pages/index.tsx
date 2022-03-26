@@ -3,7 +3,8 @@ import Layout from '../layout/Layout'
 
 const Home: NextPage = () => {
   return (
-    <div className='bg-gray-50 dark:bg-black'>
+    // <div className='bg-gray-50 dark:bg-black'>
+    <div>
       <Layout title="Darshan Aswath | Portfolio">
         <div className='space-y-4'>
           <p className='text-black dark:text-white'>
