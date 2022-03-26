@@ -1,4 +1,4 @@
-export default function Bookmark({ metadata }: any) {
+export default function Bookmark() {
     return (
         <div>
             <div className="flex space-x-2 items-center">
