@@ -26,8 +26,8 @@ export default function Bookmark() {
             <div className="space-y-4">
                 {data && data.data.map((book) => {
                     return (
-                        <div id={book.meta.title}>
-                            <IndividualBook data={book} />
+                        <div id={book.response.meta.title}>
+                            <IndividualBook data={book.response} url={book.url} />
                         </div>
                     )
                 })}

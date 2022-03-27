@@ -36,12 +36,14 @@ export default async function handler(req: any, res: NextApiResponse): Promise<v
             headers: {
                 'Authorization': 'Basic ' + cred
             }
-        }).then(y => y.data));
-        await Promise.all(promises).then(results => {
+        }).then(y => y.data = {
+            url: url,
+            response: y.data
+        }));
+        await Promise.all(promises).then((results) => {
             list.push(results)
             res.status(200).json(paginator(list[0], page_no, items));
         });
-
     } catch (error: any) {
         res.status(error.status || 500).end(error.message)
     }
