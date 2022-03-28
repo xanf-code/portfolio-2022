@@ -29,8 +29,6 @@
     font-display : swap;
 }
 
-
-
 ::selection {
     background-color: #47a3f3;
     color: #fefefe;
@@ -84,3 +82,15 @@ pre {
     margin-top: -0.219em;
     display: table;
   }
+
+  @layer utilities {
+    @variants responsive {
+        .masonry-2-col {
+            column-count: 2;
+            column-gap: 2em;
+        }
+        .break-inside {
+            break-inside: avoid;
+        }
+    }
+}

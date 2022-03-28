@@ -13,7 +13,7 @@ export default function Footer() {
                         <Linker href='/' text="Home" />
                         <Linker href='/projects' text="Projects" />
                         <Linker href='/uses' text="Uses" />
-                        <Linker href='/words' text="Words" />
+                        <Linker href='/notes/quotes' text="Quotes" />
                     </div>
                     <div>
                         <h1 className="text-sm font-semibold tracking-wider uppercase">Specific</h1>

@@ -1,18 +1,18 @@
 import axios from "axios"
 import Link from "next/link";
-import { ReactChild, ReactFragment, ReactPortal } from "react";
 import { useQuery } from "react-query"
+import BookmarksPH from "../PlaceHolder/BookmarksPH";
 import IndividualBook from "./IndividualBook";
 
 
-export default function Bookmark() {
+const getBookmarks = async () => {
+    const resp = await axios.get(`/api/Bookmarks?page=1&item=3`);
+    return resp.data;
+}
 
-    const getBookmarks = async () => {
-        const resp = await axios.get(`/api/Bookmarks?page=1&item=4`);
-        return resp.data;
-    }
+export default function Bookmark({ bookmarks }) {
 
-    const { data, isLoading, isSuccess } = useQuery('bookmarks', getBookmarks);
+    const { data, isLoading, isError } = useQuery('bookmarks', getBookmarks, { initialData: bookmarks })
 
     return (
         <div>
@@ -23,20 +23,32 @@ export default function Bookmark() {
             <hr className="w-full border-1 border-gray-200 dark:border-gray-800 my-2 pb-2"></hr>
 
             {/* BOOKMARK ISLOADING AND SUCCESS STATES */}
-            <div className="space-y-4">
-                {data && data.data.map((book) => {
-                    return (
-                        <div id={book.response.meta.title}>
-                            <IndividualBook data={book.response} url={book.url} />
-                        </div>
-                    )
-                })}
-                <Link href="">
-                    <a>
-                        <h1 className="flex justify-end text-xs pt-2 hover:underline hover:text-blue-500 text-gray-400">Read More..</h1>
-                    </a>
-                </Link>
-            </div>
+            {isLoading || isError ?
+                <div className="flex flex-col space-y-4">
+                    <BookmarksPH />
+                    <BookmarksPH />
+                    <BookmarksPH />
+                </div> :
+                <div className="space-y-4">
+                    {data && data.data.map((book) => {
+                        return (
+                            <div id={book.response.meta.title}>
+                                <IndividualBook data={book.response} url={book.url} />
+                            </div>
+                        )
+                    })}
+                    <Link href="">
+                        <a>
+                            <h1 className="flex justify-end text-xs pt-2 hover:underline hover:text-blue-500 text-gray-400">Read More..</h1>
+                        </a>
+                    </Link>
+                </div>
+            }
         </div>
     )
+}
+
+export async function getStaticProps() {
+    const bookmarks = await getBookmarks()
+    return { props: { bookmarks } }
 }

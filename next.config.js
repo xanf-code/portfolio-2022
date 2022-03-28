@@ -5,6 +5,6 @@ module.exports = {
     BEARER_TOKEN: process.env.BEARER_TOKEN
   },
   images: {
-    domains: ['pbs.twimg.com'],
+    domains: ['pbs.twimg.com', 'bit.ly'],
   },
 }
