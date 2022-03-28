@@ -10,7 +10,7 @@ const getBookmarks = async () => {
     return resp.data;
 }
 
-export default function Bookmark({ bookmarks }) {
+export default function Bookmark({ bookmarks }: any) {
 
     const { data, isLoading, isError } = useQuery('bookmarks', getBookmarks, { initialData: bookmarks })
 
