@@ -2,37 +2,48 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getLatestSong, getNowPlaying } from '../../lib/network/spotify';
 
+const getLatest = async (res: NextApiResponse) => {
+    const lastresponse = await getLatestSong();
+    const latest = await lastresponse.json();
+    return res.status(200).json({
+        isPlaying: false,
+        album: latest.items[0].track.album.name,
+        albumImageUrl: latest.items[0].track.album.images[0].url,
+        artist: latest.items[0].track.artists.map((_artist) => _artist.name).join(', '),
+        playedAt: latest.items[0].played_at,
+        songUrl: latest.items[0].track.external_urls.spotify,
+        title: latest.items[0].track.name
+    })
+
+}
+
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
     const response = await getNowPlaying();
-    const lastresponse = await getLatestSong();
 
-    if (response.status === 204 || response.status > 400) {
-        return res.status(200).json({ isPlaying: false });
+    console.log(response);
+
+    if (response.status >= 400 || response.status === 204 || response.statusText === 'No Content') {
+        const data = await getLatest(res);
+        return data;
     }
+    else if (response.statusText === "OK" && response.status === 200) {
+        const data = await response.json();
+        console.log(data);
 
-    const song = await response.json();
-    const latest = await lastresponse.json();
+        if (data.item === null) {
+            const data = await getLatest(res);
+            return data;
+        }
+        const isPlaying = data.is_playing;
+        const title = data.item?.name;
+        const artist = data.item?.artists.map((_artist) => _artist.name).join(', ');
+        const album = data.item?.album.name;
+        const albumImageUrl = data.item?.album.images[0].url;
+        const songUrl = data.item?.external_urls.spotify;
 
-    if (song.item === null) {
-        return res.status(200).json({ isPlaying: false });
-    }
-
-    const isPlaying = song.is_playing;
-    const title = song.item.name;
-    const artist = song.item.artists.map((_artist) => _artist.name).join(', ');
-    const album = song.item.album.name;
-    const albumImageUrl = song.item.album.images[0].url;
-    const songUrl = song.item.external_urls.spotify;
-
-    res.setHeader(
-        'Cache-Control',
-        'public, s-maxage=60, stale-while-revalidate=30'
-    );
-
-    if (isPlaying) {
         return res.status(200).json({
             album,
             albumImageUrl,
@@ -41,15 +52,9 @@ export default async function handler(
             songUrl,
             title
         });
+
     } else {
-        return res.status(200).json({
-            isPlaying: false,
-            album: latest.items[0].track.album.name,
-            albumImageUrl: latest.items[0].track.album.images[0].url,
-            artist: latest.items[0].track.artists.map((_artist) => _artist.name).join(', '),
-            playedAt: latest.items[0].played_at,
-            songUrl: latest.items[0].track.external_urls.spotify,
-            title: latest.items[0].track.name
-        })
+        const data = await getLatest(res);
+        return data;
     }
 }

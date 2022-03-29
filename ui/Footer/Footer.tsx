@@ -14,8 +14,6 @@ export default function Footer(props) {
 
     const { data } = useQuery('spotify', getNowPlayingSong, { initialData: props.response })
 
-    console.log(data);
-
     return (
         <footer className="flex flex-col justify-center max-w-2xl mx-auto w-full mb-8">
             <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-3"></hr>

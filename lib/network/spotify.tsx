@@ -13,7 +13,6 @@ const getAccessToken = async () => {
         headers: {
             'Authorization': `Basic ${basic}`,
             'Content-Type': 'application/x-www-form-urlencoded'
-
         },
         body: new URLSearchParams({
             grant_type: 'refresh_token',
@@ -26,6 +25,7 @@ const getAccessToken = async () => {
 
 export const getNowPlaying = async () => {
     const token = await getAccessToken();
+    //console.log(token);
 
     const response = await fetch(NOW_PLAYING, {
         method: "GET",

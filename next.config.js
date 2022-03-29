@@ -9,5 +9,6 @@ module.exports = {
   },
   images: {
     domains: ['pbs.twimg.com', 'bit.ly', 'i.scdn.co'],
+    minimumCacheTTL: 60,
   },
 }
