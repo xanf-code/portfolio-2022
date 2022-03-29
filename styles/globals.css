@@ -84,7 +84,7 @@ pre {
   }
 
   @layer utilities {
-    @variants responsive {
+    @layer utilities {
         .masonry-2-col {
             column-count: 2;
             column-gap: 2em;

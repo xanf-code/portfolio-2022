@@ -1,12 +1,26 @@
+import axios from "axios"
 import moment from "moment"
 import Link from "next/link"
+import { useQuery } from "react-query"
 import { Emoji } from "../Misc/Emoji"
+import Card from "../Spotify/Card"
 
-export default function Footer() {
+const getNowPlayingSong = async () => {
+    const { data } = await axios.get('api/spotifynow');
+    return data;
+}
+
+export default function Footer(props) {
+
+    const { data } = useQuery('spotify', getNowPlayingSong, { initialData: props.response })
+
+    console.log(data);
+
     return (
         <footer className="flex flex-col justify-center max-w-2xl mx-auto w-full mb-8">
-            <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-8"></hr>
-            <div>
+            <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-3"></hr>
+            {data && <Card data={data} />}
+            <div className="mt-5">
                 <div className="flex justify-start space-x-20">
                     <div>
                         <h1 className="text-sm font-semibold tracking-wider uppercase">General</h1>
@@ -42,7 +56,6 @@ export default function Footer() {
                             <h1 className="text-sm font-medium text-gray-500 dark:text-gray-400 pt-0.5">LinkedIn</h1>
                         </div>
                     </a>
-
                 </div>
             </div>
             <h1 className="text-sm font-Quattro pt-8 md:pt-6 items-center"><Emoji /> {moment().format('dddd')},2022 - Darshan</h1>
@@ -59,4 +72,15 @@ function Linker({ text, href }) {
             </a>
         </Link>
     )
+}
+
+export function getStaticProps() {
+
+    const response = getNowPlayingSong();
+
+    return {
+        props: {
+            response
+        }
+    }
 }

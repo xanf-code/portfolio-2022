@@ -32,12 +32,14 @@ export default async function handler(req: any, res: NextApiResponse): Promise<v
         const cred = Buffer.from('darshanaswath@gmail.com:B8MU3hnZqk9VB87n1gt1').toString('base64');
         let list: any = [];
 
-        var promises = urls.map(url => axios.get(`https://api.urlmeta.org?url=${url}`, {
+        var promises = urls.map(data => axios.get(`https://api.urlmeta.org?url=${data.url}`, {
             headers: {
                 'Authorization': 'Basic ' + cred
             }
         }).then(y => y.data = {
-            url: url,
+            id: data.id,
+            url: data.url,
+            tag: data.tag,
             response: y.data
         }));
         await Promise.all(promises).then((results) => {
