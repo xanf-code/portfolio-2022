@@ -6,6 +6,7 @@ import { Emoji } from "../Misc/Emoji"
 import Card from "../Spotify/Card"
 
 const getNowPlayingSong = async () => {
+    // Replace by real URL later on 
     const { data } = await axios.get('/api/spotifynow');
     return data;
 }
