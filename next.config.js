@@ -10,6 +10,6 @@ module.exports = withContentlayer()({
     SPOTIFY_REFRESH_TOKEN: process.env.SPOTIFY_REFRESH_TOKEN
   },
   images: {
-    domains: ['pbs.twimg.com', 'bit.ly', 'i.scdn.co'],
+    domains: ['pbs.twimg.com', 'bit.ly', 'i.scdn.co', 'static.raru.co.za', 'm.media-amazon.com', 'api.time.com'],
   },
 })

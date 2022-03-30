@@ -1,5 +1,4 @@
 import moment from "moment"
-import Image from "next/image"
 import { trimString } from "../../utils/trimtext"
 
 function Card({ data }) {

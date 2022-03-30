@@ -6,7 +6,7 @@ import { Emoji } from "../Misc/Emoji"
 import Card from "../Spotify/Card"
 
 const getNowPlayingSong = async () => {
-    const { data } = await axios.get('api/spotifynow');
+    const { data } = await axios.get('http://localhost:3000/api/spotifynow');
     return data;
 }
 
@@ -72,7 +72,7 @@ function Linker({ text, href }) {
     )
 }
 
-export function getStaticProps() {
+export function getServerSideProps() {
 
     const response = getNowPlayingSong();
 

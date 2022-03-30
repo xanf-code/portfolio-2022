@@ -1,4 +1,7 @@
+import BooksBox from "./BooksBox"
 import ComponentsBox from "./ComponentsBox"
+import { quotes } from "../../data/quotesdata"
+import QuotesBox from "./QuotesBox"
 
 const generateCompSVG = () => {
     return (
@@ -13,6 +16,10 @@ const generateProjectSVG = () => {
 }
 
 function FeaturedTab() {
+
+    const rand = 0 + Math.random() * ((quotes.length - 1) - 0);
+    const randomQuote = quotes[rand.toFixed()];
+
     return (
         <div className="py-2">
             <div className="flex space-x-2 items-center">
@@ -25,12 +32,8 @@ function FeaturedTab() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 <ComponentsBox image='/images/faux-code.svg' title="Projects" description="Here is a comprehensive list of all my projects, past and present." svg={generateProjectSVG()} href='/projects' />
                 <ComponentsBox image='/images/toggles.png' title="Components" description="Usefull snippets and components for building apps and websites." svg={generateCompSVG()} href='/components' />
-                <div className="bg-gray-100 h-72 rounded-lg">
-                    el3
-                </div>
-                <div className="bg-gray-100 h-72 rounded-lg">
-                    el4
-                </div>
+                <BooksBox />
+                <QuotesBox randomQuote={randomQuote} />
             </div>
         </div>
     )
