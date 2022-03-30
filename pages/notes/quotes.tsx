@@ -20,7 +20,7 @@ const Quotes = () => {
             <div className='md:masonry-2-col'>
                 {sortedQuotes.map((quote, i) => (
                     <div className='break-inside' key={i}>
-                        <p className='font-normal leading-1 tracking-wider'>{quote.content}</p>
+                        <p className='font-normal leading-1 tracking-wider text-justify'>{quote.content}</p>
                         <p className='mt-3 mb-3 font-bold text-gray-600 dark:text-gray-300  font-Quattro'>— {quote.metadata}</p>
                         <hr className="w-full border-1 border-gray-200 dark:border-gray-800 my-4"></hr>
                     </div>

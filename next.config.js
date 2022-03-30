@@ -1,5 +1,7 @@
+const { withContentlayer } = require('next-contentlayer')
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+module.exports = withContentlayer()({
   reactStrictMode: true,
   env: {
     BEARER_TOKEN: process.env.BEARER_TOKEN,
@@ -9,6 +11,5 @@ module.exports = {
   },
   images: {
     domains: ['pbs.twimg.com', 'bit.ly', 'i.scdn.co'],
-    minimumCacheTTL: 60,
   },
-}
+})

@@ -23,15 +23,12 @@ export default async function handler(
 ) {
     const response = await getNowPlaying();
 
-    console.log(response);
-
     if (response.status >= 400 || response.status === 204 || response.statusText === 'No Content') {
         const data = await getLatest(res);
         return data;
     }
     else if (response.statusText === "OK" && response.status === 200) {
         const data = await response.json();
-        console.log(data);
 
         if (data.item === null) {
             const data = await getLatest(res);

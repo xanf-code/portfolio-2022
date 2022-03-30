@@ -30,7 +30,7 @@ export default function Tweets({ tweets }) {
     )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const tweets = await getPosts(IDS);
 
     return {
