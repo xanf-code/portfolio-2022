@@ -1,9 +1,9 @@
 import { allComponents } from '../../.contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Layout from '../../layout/Layout'
+import { NextPage } from 'next'
 
-
-export default function IndividualComponent({ resource }) {
+const IndividualComponent: NextPage = ({ resource }: any) => {
     const MDXContent = useMDXComponent(resource.body.code)
     return (
         <Layout title={resource.title}>
@@ -11,6 +11,8 @@ export default function IndividualComponent({ resource }) {
         </Layout>
     )
 }
+
+export default IndividualComponent
 
 export async function getStaticPaths() {
     return {

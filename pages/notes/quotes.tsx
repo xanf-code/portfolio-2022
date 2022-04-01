@@ -1,8 +1,9 @@
+import { NextPage } from 'next'
 import sortBy from 'sort-by'
 import { quotes } from '../../data/quotesdata'
 import Layout from '../../layout/Layout'
 
-const Quotes = () => {
+const Quotes: NextPage = () => {
     const sortedQuotes = quotes.sort(sortBy("metadata"))
 
     return (

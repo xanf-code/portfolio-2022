@@ -2,8 +2,9 @@ import bookJSON from '../../local/books.json'
 import Layout from '../../layout/Layout';
 import Favs from '../../ui/Books/Favs';
 import Recents from '../../ui/Books/Recents';
+import { NextPage } from 'next';
 
-export default function books() {
+const books: NextPage = () => {
     return (
         <Layout title='Books | Darshan Aswath'>
             <h1 className="font-bold text-3xl md:text-4xl pb-2">Books</h1>
@@ -21,3 +22,5 @@ export default function books() {
         </Layout>
     )
 }
+
+export default books

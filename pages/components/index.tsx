@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { allComponents } from '../../.contentlayer/generated'
 import Layout from '../../layout/Layout'
 
-export default function components({ component }) {
+const components = ({ component }: any) => {
 
     return (
         <Layout title="Components | Darshan Aswath">
@@ -20,6 +20,8 @@ export default function components({ component }) {
         </Layout>
     )
 }
+
+export default components
 
 export async function getStaticProps() {
     const component = allComponents.sort((a, b) =>

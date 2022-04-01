@@ -1,16 +1,14 @@
 function BookmarksPH() {
     return (
         <div className="rounded-lg bg-gray-50 dark:bg-[#191f21] flex space-y-1 dark:drop-shadow-sm">
-            <img className={`hidden md:inline md:w-48 md:h-30 auto rounded-none rounded-l-md object-cover`} src='https://bit.ly/placeholder-img'></img>
+            <img className='hidden md:inline md:w-48 md:h-30 auto rounded-none rounded-l-md object-cover animate-pulse' src='https://bit.ly/placeholder-img'></img>
             <div className="p-4 md:text-left space-y-2 pt-2">
-                <div className="bg-gray-100 dark:bg-gray-800 inline-block rounded-md px-1">
-                    <h1 className="leading-1 tracking-wide text-xs text-gray-700 dark:text-gray-300 italic p-1">...</h1>
-                </div>
-                <h1 className="font-bold leading-1 tracking-wide text-xl text-gray-700 dark:text-gray-300">... </h1>
-                <p className="leading-1 tracking-wide text-gray-700 dark:text-gray-300 text-sm">.... </p>
+                <div className="bg-gray-100 dark:bg-gray-800 inline-block rounded-md px-1 w-96 h-6 animate-pulse"> </div>
+                <div className="bg-gray-100 dark:bg-gray-800 inline-block rounded-md px-1 w-72 h-3 animate-pulse"> </div>
+                <div className="bg-gray-100 dark:bg-gray-800 inline-block rounded-md px-1 w-72 h-3 animate-pulse"> </div>
                 <div className="flex space-x-2 items-center pt-3">
-                    <img src="https://bit.ly/placeholder-img" className="h-4 w-4 rounded-full" />
-                    <h1 className="leading-1 tracking-wide text-xs text-gray-700 dark:text-gray-300">....</h1>
+                    <img src="https://bit.ly/placeholder-img" className="h-4 w-4 rounded-full animate-pulse" />
+                    <div className="bg-gray-100 dark:bg-gray-800 inline-block rounded-md px-1 w-10 h-3 animate-pulse"> </div>
                 </div>
             </div>
         </div>

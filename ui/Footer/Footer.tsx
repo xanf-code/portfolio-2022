@@ -33,7 +33,7 @@ export default function Footer(props) {
                         <Linker href='/components' text="Components" />
                         <Linker href='/changelog' text="Changelog" />
                         <Linker href='/resume' text="Resume" />
-                        <Linker href='/spotify' text="Spotify" />
+                        <Linker href='/notes/spotify' text="Spotify" />
                     </div>
                 </div>
                 <div className="flex pt-8 space-x-6">

@@ -1,9 +1,10 @@
+import { NextPage } from "next";
 import { IDS } from "../data/tweets";
 import Layout from "../layout/Layout"
 import { getPosts } from "../lib/network/twitter"
 import Container from "../ui/Tweet/container";
 
-export default function Tweets({ tweets }) {
+const Tweets: NextPage = ({ tweets }: any) => {
 
     return (
         <Layout title="Tweets | Darshan Aswath">
@@ -29,6 +30,8 @@ export default function Tweets({ tweets }) {
         </Layout>
     )
 }
+
+export default Tweets
 
 export async function getStaticProps() {
     const tweets = await getPosts(IDS);

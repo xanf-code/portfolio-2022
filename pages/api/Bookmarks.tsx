@@ -2,7 +2,6 @@ import axios from "axios";
 import { NextApiRequest, NextApiResponse } from "next";
 import { urls } from "../../URL/bookmarks";
 
-
 function paginator(items: any[], current_page: number, per_page_items: number) {
     let page = current_page || 1,
         per_page = per_page_items || 10,

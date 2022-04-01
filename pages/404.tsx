@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { NextPage } from 'next';
 import Link from 'next/link';
 import { useQuery } from 'react-query';
 import Layout from '../layout/Layout';
@@ -8,7 +9,7 @@ const fetchQuotes = async () => {
     return data.text;
 }
 
-export default function NotFound() {
+const NotFound: NextPage = () => {
 
     const { data, isLoading, isError, isSuccess } = useQuery('quotes', fetchQuotes)
 
@@ -49,3 +50,5 @@ export default function NotFound() {
         </Layout>
     );
 }
+
+export default NotFound

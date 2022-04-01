@@ -11,7 +11,7 @@ function IndividualBook({ data, url, tag }) {
                         <h1 className="leading-1 tracking-wide text-xs text-gray-700 dark:text-gray-300 italic p-1">{tag}</h1>
                     </div>
                     <h1 className="font-bold leading-1 tracking-wide text-xl text-gray-700 dark:text-gray-300">{trimString(data.meta.title, 42)} </h1>
-                    <p className="leading-1 tracking-wide text-gray-700 dark:text-gray-300 text-sm">{trimString(data.meta.description, 120)} </p>
+                    <p className="leading-1 tracking-wide text-gray-700 dark:text-gray-300 text-sm">{trimString(!data.meta.description ? 'Dev forgot to write a description :(' : data.meta.description, 120)} </p>
                     <div className="flex space-x-2 items-center pt-3">
                         <img src={data.meta.site.favicon} alt={data.meta.site.name} className="h-4 w-4" />
                         <h1 className="leading-1 tracking-wide text-xs text-gray-700 dark:text-gray-300">{!data.meta.site.name ? "Some Dev" : data.meta.site.name}</h1>
