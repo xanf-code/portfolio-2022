@@ -13,7 +13,7 @@
 @font-face {
     font-family: 'ProximaRegular';
     font-display: swap;
-    src: url('/fonts/Proxima-Nova-Regular.woff2');
+    src: url('/fonts/ProximaNova-Regular.woff');
 }
 
 @font-face {
@@ -40,7 +40,7 @@ html {
   }
   
 #__next {
-    @apply bg-[#fcfcfc] dark:bg-[#161616];
+    @apply bg-[#fcfcfc] dark:bg-[#161616] transition-all ease-in-out duration-150;
     /* @apply bg-gradient-to-b from-[#ffffff] to-[#f5e3e6] dark:from-[#000000] dark:to-[#12100e]; */
     display: flex;
     flex-direction: column;

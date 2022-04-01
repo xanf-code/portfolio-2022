@@ -10,10 +10,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["'ProximaRegular'", ...fontFamily.sans],
+        sans: ["'IBMSans'", ...fontFamily.sans],
         Quattro: 'Quattro',
         QuattroBold: 'QuattroBold',
-        IBMSans: 'IBMSans'
+        IBMSans: 'IBMSans',
+        ProximaRegular: 'ProximaRegular'
       },
     },
   },

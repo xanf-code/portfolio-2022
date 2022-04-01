@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 function Layout({ children, title }) {
     return (
-        <div>
+        <div className="transition ease-in-out duration-250">
             <Head>
                 <title>{title}</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
