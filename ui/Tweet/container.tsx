@@ -18,13 +18,13 @@ function Container({ data }) {
                 <div className="flex justify-between items-center">
                     <div className="flex flex-row items-center">
                         <div className="relative w-12 h-12">
-                            <Image className="rounded-full border border-gray-100 shadow-sm" height={50} width={50} src={data.profile_image_url} />
+                            <Image className="rounded-full border border-gray-100 shadow-sm" height={50} width={50} src={data.profile_image_url} alt={data.username} />
                         </div>
                         <div className="flex flex-col px-4">
                             <div className="flex items-center space-x-1.5">
                                 <h1 className=" font-QuattroBold text-base">{data.name}</h1>
                                 {data.verified && <div className="w-4 h-4">
-                                    <Image src={image} width={0} height={0} />
+                                    <Image src={image} width={0} height={0} alt="tick-verification" />
                                 </div>}
                             </div>
                             <span className="text-gray-500 font-Quattro text-sm dark:text-gray-400">@{data.username}</span>

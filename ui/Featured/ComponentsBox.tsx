@@ -6,7 +6,7 @@ function ComponentsBox({ image, title, svg, description, href }) {
         <Link href={href}>
             <a>
                 <div className=" h-72 rounded-lg relative max-w-full overflow-hidden bg-black">
-                    <Image priority className="absolute inset-0 w-full h-full object-cover opacity-30 hover:opacity-20 transition ease-in-out duration-200" src={image} layout="fill" objectFit="cover" />
+                    <Image priority className="absolute inset-0 w-full h-full object-cover opacity-30 hover:opacity-20 transition ease-in-out duration-200" src={image} layout="fill" objectFit="cover" alt="comp-cover" />
                     <div className="absolute bottom-5 left-4 right-4 space-y-1">
                         <div className="flex items-center space-x-2">
                             {svg}

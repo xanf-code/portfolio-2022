@@ -13,7 +13,7 @@ function Favs({ favs }) {
                     return (
                         <a href={book.buy} target='_blank'>
                             <div>
-                                <img className='w-40 h-56 shadow-md' src={book.cover} alt="" />
+                                <img className='w-40 h-56 shadow-md' src={book.cover} alt={book.name} />
                                 <h1 className="font-medium pt-2 text-lg">{trimString(book.name, 15)}</h1>
                                 <p className="text-sm italic text-gray-400">{book.author}</p>
                             </div>

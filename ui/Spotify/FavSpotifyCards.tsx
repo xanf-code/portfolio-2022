@@ -6,7 +6,7 @@ function FavSpotifyCards({ image, title, artist, link }) {
         <Link href={link}>
             <a>
                 <div className="flex items-center space-x-3">
-                    <Image className="rounded-md" src={image} width={50} height={50} />
+                    <Image className="rounded-md" src={image} width={50} height={50} alt={title} />
                     <div>
                         <h1 className="font-semibold">{title}</h1>
                         <p className="text-xs font-Quattro">{artist}</p>
