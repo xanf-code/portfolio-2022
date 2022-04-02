@@ -7,7 +7,9 @@ module.exports = withContentlayer()({
     BEARER_TOKEN: process.env.BEARER_TOKEN,
     SPOTIFY_CLIENT_ID: process.env.SPOTIFY_CLIENT_ID,
     SPOTIFY_CLIENT_SECRET: process.env.SPOTIFY_CLIENT_SECRET,
-    SPOTIFY_REFRESH_TOKEN: process.env.SPOTIFY_REFRESH_TOKEN
+    SPOTIFY_REFRESH_TOKEN: process.env.SPOTIFY_REFRESH_TOKEN,
+    MUSIC_PLAYLIST_ID: process.env.MUSIC_PLAYLIST_ID,
+    PODCAST_PLAYLIST_ID: process.env.PODCAST_PLAYLIST_ID
   },
   images: {
     domains: ['pbs.twimg.com', 'bit.ly', 'i.scdn.co', 'static.raru.co.za', 'm.media-amazon.com', 'api.time.com'],

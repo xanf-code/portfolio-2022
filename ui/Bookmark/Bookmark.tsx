@@ -37,13 +37,13 @@ export default function Bookmark({ bookmarks }: any) {
                             </div>
                         )
                     })}
-                    <Link href="">
-                        <a>
-                            <h1 className="flex justify-end text-xs pt-2 hover:underline hover:text-blue-500 text-gray-400">Read More..</h1>
-                        </a>
-                    </Link>
                 </div>
             }
+            <Link href="">
+                <a>
+                    <h1 className="flex justify-end text-xs pt-2 hover:underline hover:text-blue-500 text-gray-400">Read More..</h1>
+                </a>
+            </Link>
         </div>
     )
 }

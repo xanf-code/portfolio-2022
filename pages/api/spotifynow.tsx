@@ -1,4 +1,3 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getLatestSong, getNowPlaying } from '../../lib/network/spotify';
 

@@ -43,6 +43,10 @@ export default async function handler(req: any, res: NextApiResponse): Promise<v
         }));
         await Promise.all(promises).then((results) => {
             list.push(results)
+            res.setHeader(
+                'Cache-Control',
+                'public, s-maxage=86400, stale-while-revalidate=43200'
+            );
             res.status(200).json(paginator(list[0], page_no, items));
         });
     } catch (error: any) {
