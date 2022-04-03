@@ -18,7 +18,7 @@ function NameTypewritter() {
                             <a>
                                 <span className="hover:underline">Artist (?)</span>
                             </a>
-                        </Link>.
+                        </Link>
                     </h2>
                 </div>
             </div>
