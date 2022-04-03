@@ -8,13 +8,13 @@ const components = ({ component }: any) => {
         <Layout title="Components | Darshan Aswath">
             {component.map(data => {
                 return (
-                    <Link href={`/components/${data.slug}`}>
-                        <a>
-                            <div key={data._id}>
+                    <div key={data._id}>
+                        <Link href={`/components/${data.slug}`}>
+                            <a>
                                 <h1>{data.title}</h1>
-                            </div>
-                        </a>
-                    </Link>
+                            </a>
+                        </Link>
+                    </div>
                 )
             })}
         </Layout>

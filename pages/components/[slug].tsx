@@ -1,18 +1,23 @@
 import { allComponents } from '../../.contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
-import Layout from '../../layout/Layout'
-import { NextPage } from 'next'
+import Image from 'next/image'
+import BlogLayout from '../../layout/Blog'
+import { Component } from '../../.contentlayer/generated'
+import components from '../../ui/MDX/components'
 
-const IndividualComponent: NextPage = ({ resource }: any) => {
+export default function IndividualComponent({ resource }: { resource: Component }) {
     const MDXContent = useMDXComponent(resource.body.code)
+
     return (
-        <Layout title={resource.title}>
-            <MDXContent />
-        </Layout>
+        <BlogLayout post={resource}>
+            <MDXContent components={
+                {
+                    ...components,
+                } as any
+            } />
+        </BlogLayout>
     )
 }
-
-export default IndividualComponent
 
 export async function getStaticPaths() {
     return {
@@ -26,9 +31,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const resource = allComponents.find((resource) => resource.slug === params.slug)
-
+    const resource: any = allComponents.find((resource) => resource.slug === params.slug)
     return {
-        props: { resource }
+        props: { resource, }
     }
 }
