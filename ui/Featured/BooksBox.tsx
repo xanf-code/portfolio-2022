@@ -10,7 +10,7 @@ function BooksBox() {
         <Link href='/notes/books'>
             <a>
                 <div className=" h-72 rounded-lg relative max-w-full overflow-hidden bg-black">
-                    <Image priority className="absolute inset-0 w-full h-full object-cover opacity-40 hover:opacity-30 transition ease-in-out duration-200" src='https://api.time.com/wp-content/uploads/2021/11/featured-image.jpg?quality=85&w=2024&h=1138&crop=1' alt='notes-cover' layout="fill" objectFit="cover" />
+                    <Image priority className="absolute inset-0 w-full h-full object-cover opacity-40 hover:opacity-30 transition ease-in-out duration-200" src='/images/featured-image.webp' alt='notes-cover' layout="fill" objectFit="cover" />
                     <div className="absolute bottom-5 left-4 right-4 space-y-1">
                         <h1 className='text-white p-3 text-sm font-normal'>Recently read
                             <span className='pl-1 italic font-QuattroBold underline'>

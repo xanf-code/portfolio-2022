@@ -51,6 +51,7 @@ const Components = defineDocumentType(() => ({
         description: { type: 'string', required: true },
         image: { type: 'string', required: true },
         publishedAt: { type: 'string', required: true },
+        tag: { type: 'string', required: true }
     },
     computedFields
 }));

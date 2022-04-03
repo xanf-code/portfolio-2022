@@ -5,7 +5,7 @@ function NameTypewritter() {
         <div className="flex-1 flex flex-col w-full">
             <div className="relative flex items-center mb-6">
                 <div className="absolute ml-1 md:ml-0 mr-4 sm:mr-8 transform -rotate-6 rounded-lg h-24 w-24 dark:bg-gradient-to-r dark:from-pink-700 dark:to-purple-600 dark:opacity-75 dark:blur-lg" />
-                <img src="/images/mexd.png" alt="darshan-aswath" className="ml-1 md:ml-0 mr-4 sm:mr-8 transform -rotate-6 rounded-lg h-24 w-24" />
+                <img src="/images/mexd.webp" alt="darshan-aswath" className="ml-1 md:ml-0 mr-4 sm:mr-8 transform -rotate-6 rounded-lg h-24 w-24" />
                 <div>
                     <h1 className="font-bold text-4xl md:text-5xl tracking-tight font-IBMSans">Darshan Aswath</h1>
                     <h2 className="text-stone-700 dark:text-stone-200 text-sm">

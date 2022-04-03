@@ -1,19 +1,31 @@
-import Link from 'next/link'
 import { allComponents } from '../../.contentlayer/generated'
 import Layout from '../../layout/Layout'
+import ComponentCard from '../../ui/Components/ComponentCard'
 
 const components = ({ component }: any) => {
 
     return (
         <Layout title="Components | Darshan Aswath">
+            <h1 className="font-bold text-3xl md:text-4xl pb-3">Components</h1>
+            <div className='space-y-2'>
+                <p className="pb-2 font-Quattro text-sm text-gray-600 dark:text-gray-200">
+                    We've all experienced this one interaction that you can't stop playing with because it just feels right.
+                </p>
+                <p className="pb-2 font-Quattro text-sm text-gray-500 dark:text-gray-300">
+                    I wish to build user interfaces and snippets because they are exciting and challenging to create.
+                </p>
+                <p className="pb-2 font-Quattro text-sm text-gray-400 dark:text-gray-400">
+                    This is an experimental laboratory of user interface patterns and interactions.
+                </p>
+                <p className="pb-2 font-Quattro text-sm text-gray-300 dark:text-gray-500">
+                    I hope these inspire you to build cool shit. 🖤
+                </p>
+            </div>
+            <hr className="w-full border-1 border-gray-200 dark:border-gray-800 my-2 pb-5"></hr>
             {component.map(data => {
                 return (
                     <div key={data._id}>
-                        <Link href={`/components/${data.slug}`}>
-                            <a>
-                                <h1>{data.title}</h1>
-                            </a>
-                        </Link>
+                        <ComponentCard data={data} />
                     </div>
                 )
             })}

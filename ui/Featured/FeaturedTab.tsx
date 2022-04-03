@@ -30,8 +30,8 @@ function FeaturedTab() {
             </div>
             <hr className="w-full border-1 border-gray-200 dark:border-gray-800 my-2"></hr>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                <ComponentsBox image='/images/faux-code.svg' title="Projects" description="Here is a comprehensive list of all my projects, past and present." svg={generateProjectSVG()} href='/projects' />
-                <ComponentsBox image='/images/toggles.png' title="Components" description="Usefull snippets and components for building apps and websites." svg={generateCompSVG()} href='/components' />
+                <ComponentsBox image='/images/faux-code.webp' title="Projects" description="Here is a comprehensive list of all my projects, past and present." svg={generateProjectSVG()} href='/projects' />
+                <ComponentsBox image='/images/toggles.webp' title="Components" description="Usefull snippets and components for building apps and websites." svg={generateCompSVG()} href='/components' />
                 <BooksBox />
                 <QuotesBox randomQuote={randomQuote} />
             </div>

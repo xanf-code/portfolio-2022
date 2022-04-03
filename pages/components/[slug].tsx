@@ -1,6 +1,5 @@
 import { allComponents } from '../../.contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
-import Image from 'next/image'
 import BlogLayout from '../../layout/Blog'
 import { Component } from '../../.contentlayer/generated'
 import components from '../../ui/MDX/components'
