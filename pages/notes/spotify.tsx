@@ -30,7 +30,7 @@ export default function spotify(props: any) {
 
     return (
         <Layout title="Spotify | Darshan Aswath">
-            <div className="flex flex-col space-y-6">
+            <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16 space-y-6">
                 <div>
                     <h1 className="font-bold text-3xl md:text-4xl pb-2 text-left">Podcasts & Music</h1>
                     <p className="pb-2 font-Quattro text-sm text-gray-600 dark:text-gray-300">

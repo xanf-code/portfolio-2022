@@ -99,6 +99,10 @@ pre {
     }
 }
 
+#skip {
+  scroll-margin-top: 1.125rem;
+}
+
 .prose .anchor {
     @apply absolute invisible no-underline;
   

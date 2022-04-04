@@ -11,12 +11,12 @@ function NameTypewritter() {
                     <h2 className="text-stone-700 dark:text-stone-200 text-sm">
                         <Link href='/projects'>
                             <a>
-                                <span className="hover:underline pr-1">Engineer</span>
+                                <span className="hover:underline pr-1 font-Quattro">Engineer</span>
                             </a>
                         </Link>
                         and maybe an <Link href='/components'>
                             <a>
-                                <span className="hover:underline">Artist (?)</span>
+                                <span className="hover:underline font-Quattro">Artist (?)</span>
                             </a>
                         </Link>
                     </h2>
