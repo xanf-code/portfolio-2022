@@ -7,7 +7,7 @@ import NameTypewritter from '../ui/Home/NameTypewritter'
 const Home: NextPage = () => {
   return (
     <Layout title="Darshan Aswath | Portfolio">
-      <div className="max-w-2xl mx-auto pb-16 space-y-4">
+      <div className="max-w-2xl mx-auto space-y-4">
         <NameTypewritter />
         <FeaturedTab />
         <Bookmark />
