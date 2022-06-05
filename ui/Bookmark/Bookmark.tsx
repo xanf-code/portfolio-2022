@@ -1,5 +1,6 @@
 import axios from "axios"
 import Link from "next/link";
+import { Key } from "react";
 import { useQuery } from "react-query"
 import BookmarksPH from "../PlaceHolder/BookmarksPH";
 import IndividualBook from "./IndividualBook";
@@ -30,7 +31,7 @@ export default function Bookmark({ bookmarks }: any) {
                     <BookmarksPH />
                 </div> :
                 <div className="space-y-4">
-                    {data && data.data.map((book) => {
+                    {data && data.data.map((book: { id: Key | null | undefined; response: any; url: any; tag: any; }) => {
                         return (
                             <div key={book.id}>
                                 <IndividualBook data={book.response} url={book.url} tag={book.tag} />

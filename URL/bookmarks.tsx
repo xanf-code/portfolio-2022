@@ -11,7 +11,7 @@ export const urls = [
     },
     {
         id: 3,
-        url: "https://repeller.com/trap-of-turning-hobbies-into-hustles/",
-        tag: "General"
+        url: "https://nav.al/failure",
+        tag: "Life"
     }
 ];
