@@ -41,7 +41,7 @@ const Tweets: NextPage = ({ tweets }: any) => {
 
 export default Tweets;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const tweets = await getPosts(IDS);
   return {
     props: {
