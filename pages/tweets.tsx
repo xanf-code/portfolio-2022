@@ -6,7 +6,7 @@ import Container from "../ui/Tweet/container";
 
 const Tweets: NextPage = ({ tweets }: any) => {
   return (
-    <Layout title="Tweets | Darshan Aswath">
+    <Layout title="Tweets">
       <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
         <h1 className="font-bold text-3xl md:text-4xl pb-2">
           Favourite Tweets

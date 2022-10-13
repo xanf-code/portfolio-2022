@@ -1,48 +1,60 @@
 {
-    "recently": [
-        {
-            "name": "Atomic Habits",
-            "cover": "https://m.media-amazon.com/images/I/513Y5o-DYtL.jpg",
-            "author": "James Clear",
-            "buy": "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299"
-        },
-        {
-            "name": "The Power of Your Subconscious Mind",
-            "cover": "https://m.media-amazon.com/images/I/610mObHZ-JL._AC_UY436_FMwebp_QL65_.jpg",
-            "author": "Joseph Murphy",
-            "buy": "https://www.amazon.com/Power-Your-Subconscious-Mind/dp/160459201X"
-        },
-        {
-            "name": "The Subtle Art of Not Giving a F*ck",
-            "cover": "https://m.media-amazon.com/images/I/51MT0MbpD7L.jpg",
-            "author": "Mark Manson",
-            "buy": "https://www.amazon.com/Subtle-Art-Not-Giving-Counterintuitive/dp/B01I29Y344"
-        }
-    ],
-    "favourites": [
-        {
-            "name": "Atomic Habits",
-            "cover": "https://static.raru.co.za/cover/2018/05/25/6665445-m.jpg?v=1527202800",
-            "author": "James Clear",
-            "buy": "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299"
-        },
-        {
-            "name": "The Richest Man In Babylon",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/41m1xGTjweL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
-            "author": "George S. Clason",
-            "buy": "https://www.amazon.com/Richest-Man-Babylon-Magic-Story/dp/1939438632/"
-        },
-        {
-            "name": "The Power of Your Subconscious Mind",
-            "cover": "https://m.media-amazon.com/images/I/610mObHZ-JL._AC_UY436_FMwebp_QL65_.jpg",
-            "author": "Joseph Murphy",
-            "buy": "https://www.amazon.com/Power-Your-Subconscious-Mind/dp/160459201X"
-        },
-        {
-            "name": "A Promised Land",
-            "cover": "https://images-na.ssl-images-amazon.com/images/I/41VO0mMLRzL._SX327_BO1,204,203,200_.jpg",
-            "author": "Barack Obama",
-            "buy": "https://www.amazon.com/Promised-Land-Barack-Obama/dp/1524763160"
-        }
-    ]
+  "recently": [
+    {
+      "name": "The Daily Stoic",
+      "cover": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/41QOsSsYHML._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+      "author": "Ryan Holiday",
+      "buy": "https://www.amazon.com/Daily-Stoic-Meditations-Wisdom-Perseverance/dp/0735211736"
+    },
+    {
+      "name": "Atomic Habits",
+      "cover": "https://m.media-amazon.com/images/I/513Y5o-DYtL.jpg",
+      "author": "James Clear",
+      "buy": "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299"
+    },
+    {
+      "name": "The Power of Your Subconscious Mind",
+      "cover": "https://m.media-amazon.com/images/I/610mObHZ-JL._AC_UY436_FMwebp_QL65_.jpg",
+      "author": "Joseph Murphy",
+      "buy": "https://www.amazon.com/Power-Your-Subconscious-Mind/dp/160459201X"
+    },
+    {
+      "name": "48 Laws of Power",
+      "cover": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/41dTDMW9IhL.jpg",
+      "author": "Robert Greene",
+      "buy": "https://www.amazon.com/48-Laws-of-Power-Robert-Greene-audiobook/dp/B00X0TKUS0"
+    }
+  ],
+  "favourites": [
+    {
+      "name": "The Daily Stoic",
+      "cover": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/41QOsSsYHML._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+      "author": "Ryan Holiday",
+      "buy": "https://www.amazon.com/Daily-Stoic-Meditations-Wisdom-Perseverance/dp/0735211736"
+    },
+    {
+      "name": "Atomic Habits",
+      "cover": "https://static.raru.co.za/cover/2018/05/25/6665445-m.jpg?v=1527202800",
+      "author": "James Clear",
+      "buy": "https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299"
+    },
+    {
+      "name": "The Richest Man In Babylon",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41m1xGTjweL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+      "author": "George S. Clason",
+      "buy": "https://www.amazon.com/Richest-Man-Babylon-Magic-Story/dp/1939438632/"
+    },
+    {
+      "name": "The Power of Your Subconscious Mind",
+      "cover": "https://m.media-amazon.com/images/I/610mObHZ-JL._AC_UY436_FMwebp_QL65_.jpg",
+      "author": "Joseph Murphy",
+      "buy": "https://www.amazon.com/Power-Your-Subconscious-Mind/dp/160459201X"
+    },
+    {
+      "name": "A Promised Land",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41VO0mMLRzL._SX327_BO1,204,203,200_.jpg",
+      "author": "Barack Obama",
+      "buy": "https://www.amazon.com/Promised-Land-Barack-Obama/dp/1524763160"
+    }
+  ]
 }
