@@ -2,14 +2,6 @@ const { withContentlayer } = require("next-contentlayer");
 
 /** @type {import('next').NextConfig} */
 module.exports = withContentlayer()({
-  async rewrites() {
-    return [
-      {
-        source: "api/spotifynow",
-        destination: "https://www.darshanaswath.live/api/spotifynow",
-      },
-    ];
-  },
   reactStrictMode: true,
   env: {
     BEARER_TOKEN: process.env.BEARER_TOKEN,

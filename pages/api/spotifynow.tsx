@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getLatestSong, getNowPlaying } from "../../lib/network/spotify";
+import NextCors from "nextjs-cors";
 
 const getLatest = async (res: NextApiResponse) => {
   const lastresponse = await getLatestSong();
@@ -30,7 +31,12 @@ export default async function handler(
   ) {
     const data = await getLatest(res);
     return data;
-  } else if (response.statusText === "OK" && response.status === 200) {
+  } else if (
+    response.statusText === "OK" &&
+    response.status === 200 &&
+    req.method == "GET"
+  ) {
+    res.setHeader("Allow", "GET");
     const data = await response.json();
 
     if (data.item === null) {
