@@ -1,10 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getLatestSong, getNowPlaying } from "../../lib/network/spotify";
-import Cors from "cors";
-
-const cors = Cors({
-  methods: ["GET", "POST"],
-});
 
 const getLatest = async (res: NextApiResponse) => {
   const lastresponse = await getLatestSong();
@@ -26,7 +21,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  await cors(req, res);
   const response = await getNowPlaying();
 
   if (
